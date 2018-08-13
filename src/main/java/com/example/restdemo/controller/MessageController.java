@@ -31,9 +31,10 @@ public class MessageController {
 
 
     @GetMapping
-    public List<Map<String, String>> list(){
+    public List<Map<String, String>> list() {
         return messages;
     }
+
     @GetMapping("{id}")
     public Map<String, String> getOne(@PathVariable String id) {
         return getMessage(id);
@@ -67,7 +68,7 @@ public class MessageController {
     }
 
     @DeleteMapping("{id}")
-    public void delete(@PathVariable String id){
+    public void delete(@PathVariable String id) {
         Map<String, String> message = getMessage(id);
         messages.remove(message);
     }
