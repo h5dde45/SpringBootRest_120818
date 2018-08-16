@@ -68,9 +68,9 @@ Vue.component('messages-row', {
         del: function () {
             messageApi.remove({id: this.message.id})
                 .then(result =>{
-                    if(result.ok){
-                        this.messages.splice(this.messages.indexOf(this.message), 1)
-                    }})
+               if(result.ok){
+                    this.messages.splice(this.messages.indexOf(this.message), 1)
+               }})
         }
     }
 });
